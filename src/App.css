@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    --light-red-bg: hsla(0, 100%, 67%, 0.1);
+    --orangey-yellow-bg: hsla(39, 100%, 56%, 0.1);
+    --green-teal-bg: hsla(166, 100%, 37%, 0.1);
+    --cobalt-blue-bg: hsla(234, 85%, 45%, 0.1);
+
+    --light-red-text: hsl(0, 100%, 67%);
+    --orangey-yellow-text: hsl(39, 100%, 56%);
+    --green-teal-text: hsl(166, 100%, 37%);
+    --cobalt-blue-text: hsl(234, 85%, 45%);
+
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+h1{
+    font-weight: 500;
+    color: var(--Light-lavender);
+}
+
+h2{
+    color: var(--White);
+}
+
+p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+button{
+    border: 0;
+    text-decoration: none;
+}
+
+.main-card {
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--White);
+}
+
+.main-card__button{
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    font-size: 18px;
+}
+
+.main-card__button:hover{
+    background: linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    cursor: pointer;
+}
+
+.main-card__score-card{
+    height: 40%;
+    min-height: 325px;
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    border-radius: 0 0 32px 32px;
+    color: var(--Light-lavender);   
+}
+
+.main-card__score-card > p{
+    max-width: 70%;
+    text-align: center;
+}
+
+.main-card__score-card > h2 {
+    font-weight: 800;
+}
+
+.score-counter{
+    max-width: 150px;
+    max-height: 150px;
+    width: 30%;
+    /* height: 30vw; */
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(var(--Violet-blue-circle), var(--Persian-blue-circle));
+}
+
+.score-counter > h2 {
+    font-size: 48px;
+}
+
+.main-card__summary-card{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main-card__summary-card > article{
+    min-width: 210px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.75rem;
+    font-weight: 500;
+}
+
+.main-card__summary-card > article:nth-child(2){
+    background-color: var(--light-red-bg);
+    color: var(--light-red-text);
+}
+.main-card__summary-card article:nth-child(3){
+    background-color: var(--orangey-yellow-bg);
+    color: var(--orangey-yellow-text);
+}
+.main-card__summary-card article:nth-child(4){
+    background-color: var(--green-teal-bg);
+    color: var(--green-teal-text);
+}
+.main-card__summary-card article:nth-child(5){
+    background-color: var(--cobalt-blue-bg);
+    color: var(--cobalt-blue-text);
+}
+
+.main-card__summary-card > article div{
+    display: flex;
+    gap: 1rem;
+}
+.main-card__summary-card > article strong{
+    color: var(--Dark-gray-blue);
+}
+.main-card__summary-card > article p{
+    color: var(--Light-lavender);
+}
+
+@media (min-width: 700px) {
+    .main-card{
+        max-width: 750px;
+        min-height: 0;
+        width: 70vw;
+        display: flex;
+        border-radius: 32px;
+        overflow: hidden;
+        box-shadow: 10px 10px 20px hsla(245, 100%, 90%, 0.5);
+    }
+    .main-card__score-card{
+        border-radius: 32px;
+        height: auto;
+    }
+    .main-card__summary-card{
+        width: 70%;
+    }
+    .score-counter{
+        max-width: max-content;
+        max-height: max-content;
+        height: 170px;
+        width: auto;
+    }
+}
